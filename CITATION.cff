@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use Prompt-Literate Workflow, please cite it using these metadata."
 title: "Prompt-Literate Workflow"
 type: software
-version: "0.1.2"
+version: "0.1.3"
 date-released: "2026-06-14"
 repository-code: "https://github.com/IRONCREED/prompt-literate-workflow"
 url: "https://github.com/IRONCREED/prompt-literate-workflow"
@@ -16,9 +16,3 @@ authors:
     family-names: "Dubinetska"
     orcid: "https://orcid.org/0009-0003-8777-8412"
     website: "https://github.com/dubinetsky/"
-
-references:
-  - type: software
-    title: "Literate Programming: Donald Knuth, WEB, and Contemporary Workflows"
-    repository-code: "https://github.com/Zhovten-Games/literate-programming"
-    url: "https://github.com/Zhovten-Games/literate-programming"

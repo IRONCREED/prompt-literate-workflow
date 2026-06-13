@@ -1,0 +1,40 @@
+{
+  "title": "Prompt-Literate Workflow",
+  "upload_type": "software",
+  "access_right": "open",
+  "version": "0.1.3",
+  "language": "eng",
+  "license": "cc-by-sa-4.0",
+  "creators": [
+    {
+      "name": "Starling, Sam",
+      "orcid": "0009-0009-2621-6372"
+    },
+    {
+      "name": "Dubinetska, Oksana",
+      "orcid": "0009-0003-8777-8412"
+    }
+  ],
+  "description": "Prompt-Literate Workflow is a structured method for using LLMs inside a literate workflow. It is not a prompt-to-code shortcut: it organizes work through a human-authored plan, chunk contracts, bounded prompts, candidate output, review, tests or smoke-checks, and TRACE. The repository uses scoped multi-licensing: methodological prose and documentation are licensed under Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0); reusable schemas, starter files, prompts, examples, scripts, and tests are licensed under the MIT License. See LICENSE.md and LICENSING-OVERRIDES.md for the authoritative licensing map.",
+  "keywords": [
+    "literate programming",
+    "prompt-literate workflow",
+    "LLM",
+    "AI-assisted programming",
+    "software engineering",
+    "traceability",
+    "reproducible workflow"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.20608559",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-preprint"
+    },
+    {
+      "identifier": "https://github.com/Zhovten-Games/literate-programming",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}
