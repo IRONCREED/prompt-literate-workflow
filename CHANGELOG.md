@@ -9,3 +9,5 @@ Initial development scaffold for the `v0.1.0` release line.
 - Adds phase-aware TRACE schemas.
 - Adds scenario test-backing status requirements.
 - Adds a neutral starter template and validation script.
+- Adds an optional Code Constitution integration kit with a pinned source hierarchy, workspace overlay, and four bounded prompts.
+- Corrects repository navigation after the method and schemas moved into subdirectories.

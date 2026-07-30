@@ -52,20 +52,23 @@ Prompt-Literate Workflow preserves the explanatory discipline of literate progra
 ```text
 .
 ├── README.md
-├── METHOD.en.md
-├── METHOD.ru.md
-├── CONTRACTS.schema.md
-├── SCENARIOS.schema.md
-└── TRACE.schema.md
+├── methodology/
+│   ├── METHOD.en.md
+│   └── METHOD.ru.md
+├── schemas/
+├── scripts/validate-project.py
+├── starter/
+└── integrations/code-constitution/
 ```
 
 ### Start Here
 
-* [Method description in English](METHOD.en.md)
-* [Описание метода на русском языке](METHOD.ru.md)
-* [Chunk-contract schema](CONTRACTS.schema.md)
-* [Validation-scenario schema](SCENARIOS.schema.md)
-* [TRACE schema](TRACE.schema.md)
+* [Method description in English](methodology/METHOD.en.md)
+* [Описание метода на русском языке](methodology/METHOD.ru.md)
+* [Chunk-contract schema](schemas/CONTRACTS.schema.md)
+* [Validation-scenario schema](schemas/SCENARIOS.schema.md)
+* [TRACE phase 0 schema](schemas/TRACE.phase-0.schema.md)
+* [TRACE phase 1 schema](schemas/TRACE.phase-1.schema.md)
 
 ## File Roles
 
@@ -74,7 +77,7 @@ Prompt-Literate Workflow preserves the explanatory discipline of literate progra
 * `SCENARIOS.md` — acceptance and validation scenarios;
 * `prompts/*.prompt.md` — bounded LLM operations over the plan and contracts;
 * `generated/` — candidate generated artifacts before acceptance;
-* `tests/validate-method.sh` — validation of the required method structure;
+* `scripts/validate-project.py` — validation of the required method structure;
 * `tests/smoke-check.*` — deterministic validation of accepted artifacts;
 * `output.expected.*` — expected output markers or snapshots;
 * `TRACE.md` — trace log for prompt runs, decisions, reviews, and acceptance or rejection.
@@ -102,6 +105,10 @@ It is not equivalent to deterministic literate workflows such as WEB, CWEB, nowe
 
 The method was initially formulated in the review [*Literate Programming: Donald Knuth, WEB, and Contemporary Workflows*](https://github.com/Zhovten-Games/literate-programming) and refined through practical application to an independent project core.
 
+## Optional Integrations
+
+The [Code Constitution integration kit](integrations/code-constitution/README.md) combines PLW with a separately adopted constitutional and legislative project order. The governance corpus remains authoritative for powers, rules, and acceptance; the human-authored PLW plan remains authoritative for the intent and bounded structure of a concrete operation. Both upstream revisions are pinned, conflicts stop the run, and LLM output remains a candidate until deterministic checks and authorised human acceptance.
+
 ## Use as a Template or Submodule
 
 This repository is intentionally compact.
@@ -117,7 +124,7 @@ Project-specific rules should remain outside the universal core unless they have
 <details>
 <summary><strong>Русская версия</strong></summary>
 
-# Prompt-Literate Workflow
+## Prompt-Literate Workflow
 
 Prompt-Literate Workflow (PLW) — экспериментальный метод использования большой языковой модели внутри literate-инженерного процесса.
 
@@ -171,20 +178,23 @@ Prompt-Literate Workflow сохраняет объяснительную дис�
 ```text
 .
 ├── README.md
-├── METHOD.en.md
-├── METHOD.ru.md
-├── CONTRACTS.schema.md
-├── SCENARIOS.schema.md
-└── TRACE.schema.md
+├── methodology/
+│   ├── METHOD.en.md
+│   └── METHOD.ru.md
+├── schemas/
+├── scripts/validate-project.py
+├── starter/
+└── integrations/code-constitution/
 ```
 
 ### Начать отсюда
 
-* [Описание метода на английском языке](METHOD.en.md)
-* [Описание метода на русском языке](METHOD.ru.md)
-* [Схема контрактов чанков](CONTRACTS.schema.md)
-* [Схема сценариев валидации](SCENARIOS.schema.md)
-* [Схема TRACE](TRACE.schema.md)
+* [Описание метода на английском языке](methodology/METHOD.en.md)
+* [Описание метода на русском языке](methodology/METHOD.ru.md)
+* [Схема контрактов чанков](schemas/CONTRACTS.schema.md)
+* [Схема сценариев валидации](schemas/SCENARIOS.schema.md)
+* [Схема TRACE фазы 0](schemas/TRACE.phase-0.schema.md)
+* [Схема TRACE фазы 1](schemas/TRACE.phase-1.schema.md)
 
 ## Роли файлов
 
@@ -193,7 +203,7 @@ Prompt-Literate Workflow сохраняет объяснительную дис�
 * `SCENARIOS.md` — сценарии принятия и валидации;
 * `prompts/*.prompt.md` — ограниченные операции LLM над планом и контрактами;
 * `generated/` — кандидатные сгенерированные артефакты до их принятия;
-* `tests/validate-method.sh` — проверка обязательной структуры метода;
+* `scripts/validate-project.py` — проверка обязательной структуры метода;
 * `tests/smoke-check.*` — детерминированная проверка принятых артефактов;
 * `output.expected.*` — ожидаемые маркеры вывода или snapshots;
 * `TRACE.md` — журнал запусков промптов, решений, review, принятия и отклонения изменений.
@@ -220,6 +230,10 @@ Prompt-Literate Workflow остаётся экспериментальным м�
 Он не эквивалентен детерминированным literate-workflows: WEB, CWEB, noweb, Org Babel, Quarto, Jupyter или R Markdown. Детерминированный слой метода образуют human-authored plan, contracts, scenarios, tests и trace. Вывод LLM остаётся зависимым от модели, версии, контекста и режима выполнения.
 
 Метод был первоначально сформулирован в обзоре [*Literate Programming: Donald Knuth, WEB, and Contemporary Workflows*](https://github.com/Zhovten-Games/literate-programming), а затем уточнён при практическом применении к независимому ядру проекта.
+
+## Необязательные интеграции
+
+[Комплект интеграции с «Конституцией кода»](integrations/code-constitution/README.md) соединяет PLW с отдельно принятой Конституцией, Учредительным профилем и производным Законодательством проекта. Нормативный корпус сохраняет силу в вопросах полномочий, правил и принятия; human-authored PLW-план сохраняет силу в отношении замысла и ограниченной структуры конкретной операции. Редакции обоих внешних источников закрепляются, конфликт останавливает запуск, а вывод LLM остаётся кандидатным артефактом до детерминированных проверок и человеческого принятия уполномоченным субъектом.
 
 ## Использование как template repository или submodule
 
