@@ -1,6 +1,6 @@
 # Execute one governed bounded change
 
-Inputs:
+**Inputs**:
 
 - one approved change request;
 - current target project revision;
@@ -31,7 +31,7 @@ Produce a candidate only.
 9. Record one phase 1 TRACE entry with actual inputs, model/tool, prompt,
    candidate, changed scope, manual edits, checks, and pending decisions.
 
-Return:
+**Return**:
 
 - candidate paths;
 - exact diff scope;

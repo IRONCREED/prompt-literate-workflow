@@ -2,19 +2,19 @@
 
 Use this schema for planning, documentation, review, and scaffold-maintenance runs that do not create accepted generated implementation artifacts.
 
-- Phase:
-- Run id:
-- Date:
-- Model/tool:
-- Prompt file:
-- Inputs:
-- Allowed chunks or allowed files:
-- Changed chunks or changed files:
-- Review summary:
-- Result:
-- Notes:
+- **Phase**:
+- **Run id**:
+- **Date**:
+- **Model/tool**:
+- **Prompt file**:
+- **Inputs**:
+- **Allowed chunks or allowed files**:
+- **Changed chunks or changed files**:
+- **Review summary**:
+- **Result**:
+- **Notes**:
 
-Real Phase 0 results:
+**Real Phase 0 results**:
 
 ```text
 accepted
@@ -22,7 +22,7 @@ accepted-with-notes
 rejected
 ```
 
-Placeholder result:
+**Placeholder result**:
 
 ```text
 not-run

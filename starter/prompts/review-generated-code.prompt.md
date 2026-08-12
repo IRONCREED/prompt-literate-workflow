@@ -2,7 +2,7 @@
 
 Review candidate output against the plan, contracts, scenarios, and TRACE requirements.
 
-Report:
+**Report**:
 
 - changed chunks or files;
 - contract conformance;

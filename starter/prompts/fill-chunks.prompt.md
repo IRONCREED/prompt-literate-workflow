@@ -2,7 +2,7 @@
 
 Use the human-authored plan and `CONTRACTS.md`.
 
-Rules:
+**Rules**:
 
 - Fill only explicitly allowed `LLM-TODO` chunks.
 - Preserve chunk names.

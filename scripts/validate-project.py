@@ -64,9 +64,13 @@ NOWEB_CHUNK_DEFINITION_RE = re.compile(r"^<<([^<>\n]+)>>=\s*$", re.MULTILINE)
 MARKDOWN_CHUNK_HEADING_RE = re.compile(r"^##\s+Chunk:\s+`<<([^<>`]+)>>`\s*$", re.MULTILINE)
 CONTRACT_HEADING_RE = re.compile(r"^##\s+Chunk:\s+`<<([^<>`]+)>>`\s*$", re.MULTILINE)
 SCENARIO_HEADING_RE = re.compile(r"^##\s+Scenario:\s+(.+?)\s*$", re.MULTILINE)
-MARKDOWN_FIELD_RE_TEMPLATE = r"^[ \t]*-?[ \t]*\*\*{field}:\*\*[ \t]*(.*?)[ \t]*$"
-TRACE_FIELD_RE_TEMPLATE = r"^[ \t]*-?[ \t]*{field}:[ \t]*(.*?)[ \t]*$"
-ANY_MARKDOWN_FIELD_RE = re.compile(r"^[ \t]*-?[ \t]*\*\*[^*\n]+:\*\*", re.MULTILINE)
+MARKDOWN_FIELD_RE_TEMPLATE = r"^[ \t]*-?[ \t]*\*\*{field}(?::\*\*|\*\*:)[ \t]*(.*?)[ \t]*$"
+TRACE_FIELD_RE_TEMPLATE = (
+    r"^[ \t]*-?[ \t]*(?:\*\*{field}(?::\*\*|\*\*:)|{field}:)[ \t]*(.*?)[ \t]*$"
+)
+ANY_MARKDOWN_FIELD_RE = re.compile(
+    r"^[ \t]*-?[ \t]*\*\*[^*\n]+(?::\*\*|\*\*:)", re.MULTILINE
+)
 
 
 @dataclass(frozen=True)
@@ -349,7 +353,7 @@ class ProjectValidator:
         self.validate_scenarios(scenarios_text)
         self.validate_unique_plan_chunks(plan_files)
         self.validate_todo_contracts(plan_files, contracts_text)
-        if "Phase:" not in trace_text and "- Phase:" not in trace_text:
+        if self.trace_field_value(trace_text, "Phase") is None:
             self.errors.append("TRACE.md must declare a TRACE phase. Validator state is separate from TRACE phase.")
         if self.has_source_of_truth_violation():
             self.errors.append("Generated outputs must not be treated as source of truth.")

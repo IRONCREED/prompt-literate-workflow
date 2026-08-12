@@ -2,10 +2,10 @@
 
 ## Chunk: `<<chunk-name>>`
 
-- **Role:**
-- **Status:** author-defined | LLM-fillable
-- **Inputs:**
-- **Outputs:**
-- **Allowed changes:**
-- **Forbidden changes:**
-- **Acceptance criteria:**
+- **Role**:
+- **Status**: author-defined | LLM-fillable
+- **Inputs**:
+- **Outputs**:
+- **Allowed changes**:
+- **Forbidden changes**:
+- **Acceptance criteria**:

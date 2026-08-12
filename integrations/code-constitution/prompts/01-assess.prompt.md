@@ -1,6 +1,6 @@
 # Assess a governed PLW workspace
 
-Inputs:
+**Inputs**:
 
 - target project repository and revision;
 - Code Constitution repository and full commit SHA;
@@ -24,7 +24,7 @@ accept files.
 6. Propose the exact files to create or update, the checks to run, and the
    smallest safe migration sequence.
 
-Return:
+**Return**:
 
 - source-pin verification;
 - repository inventory;

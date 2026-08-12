@@ -1,6 +1,6 @@
 # Review a governed candidate
 
-Inputs:
+**Inputs**:
 
 - candidate and full diff;
 - normative-translation record;
@@ -32,7 +32,7 @@ specific action and the Founding Profile grants it.
    - observed behaviour conforms to the accepted candidate;
    - authorised human acceptance is present or still required.
 
-Return:
+**Return**:
 
 - findings ordered by severity;
 - check results and missing evidence;

@@ -32,9 +32,9 @@ Registration must declare:
 
 ## Allowed extension types
 
-- **Additive:** adds local checks, terminology, scenarios, or evidence requirements while preserving all base invariants.
-- **Restrictive:** narrows allowed behavior or adds stricter gates than the base method.
-- **Explanatory:** clarifies how the base method is applied locally without adding new gates.
+- **Additive**: adds local checks, terminology, scenarios, or evidence requirements while preserving all base invariants.
+- **Restrictive**: narrows allowed behavior or adds stricter gates than the base method.
+- **Explanatory**: clarifies how the base method is applied locally without adding new gates.
 
 ## Conflict resolution
 

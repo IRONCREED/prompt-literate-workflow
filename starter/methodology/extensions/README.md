@@ -4,9 +4,9 @@ Project-local extensions are optional. Create an extension only when a consuming
 
 The base methodology remains authoritative. Extensions may be:
 
-- **additive** — add local checks, scenarios, or evidence requirements;
-- **restrictive** — narrow allowed behavior or add stricter gates;
-- **explanatory** — clarify local use without adding new gates.
+- **additive**: add local checks, scenarios, or evidence requirements;
+- **restrictive**: narrow allowed behavior or add stricter gates;
+- **explanatory**: clarify local use without adding new gates.
 
 Extensions must not silently contradict base invariants. Each extension must declare validation expectations and review ownership.
 

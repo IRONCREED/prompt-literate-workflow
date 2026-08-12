@@ -2,13 +2,13 @@
 
 ## Scenario: `<name>`
 
-- **Purpose:**
-- **Input:**
-- **Expected result:**
-- **Validation method:**
-- **Test-backing status:** documentation-only | script-backed | unit-test-backed | integration-test-backed | adapter-stub-backed | manual-review-only | not-applicable-with-reason
-- **Evidence path or command:**
-- **Notes:**
+- **Purpose**:
+- **Input**:
+- **Expected result**:
+- **Validation method**:
+- **Test-backing status**: documentation-only | script-backed | unit-test-backed | integration-test-backed | adapter-stub-backed | manual-review-only | not-applicable-with-reason
+- **Evidence path or command**:
+- **Notes**:
 
 ## Allowed test-backing statuses
 

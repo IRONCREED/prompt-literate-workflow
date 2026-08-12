@@ -5,9 +5,10 @@ This repository uses the shared licensing policy pinned in `.licensing-policy/`.
 The default map from `LICENSE.md` applies unless overridden below.
 
 | Scope or path | Applied license or restriction | Reason |
-|---|---|---|
+| --- | --- | --- |
 | `README.md` | `CC-BY-SA-4.0` | Main methodological description. |
 | `METHOD.en.md` | `CC-BY-SA-4.0` | Canonical English formulation of the method. |
+| `METHOD.uk.md` | `CC-BY-SA-4.0` | Ukrainian formulation of the method. |
 | `METHOD.ru.md` | `CC-BY-SA-4.0` | Russian formulation of the method. |
 | `CONTRACTS.schema.md` | `MIT` | Reusable schema intended to be copied and adapted in other projects. |
 | `SCENARIOS.schema.md` | `MIT` | Reusable schema intended to be copied and adapted in other projects. |

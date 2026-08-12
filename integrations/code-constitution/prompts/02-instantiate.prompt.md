@@ -1,6 +1,6 @@
 # Instantiate a governed PLW workspace
 
-Inputs:
+**Inputs**:
 
 - accepted assessment from `01-assess.prompt.md`;
 - explicit human decisions for every founding value used in this pass;
@@ -27,7 +27,7 @@ merge, ratify, release, or claim that an unexecuted check passed.
 8. Run planning-state PLW validation and every safe structural check available.
 9. Record a real phase 0 TRACE entry with actual changes and results.
 
-Return:
+**Return**:
 
 - changed files;
 - unresolved blockers;

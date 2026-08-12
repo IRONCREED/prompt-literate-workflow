@@ -54,6 +54,7 @@ Prompt-Literate Workflow preserves the explanatory discipline of literate progra
 ├── README.md
 ├── methodology/
 │   ├── METHOD.en.md
+│   ├── METHOD.uk.md
 │   └── METHOD.ru.md
 ├── schemas/
 ├── scripts/validate-project.py
@@ -64,6 +65,7 @@ Prompt-Literate Workflow preserves the explanatory discipline of literate progra
 ### Start Here
 
 * [Method description in English](methodology/METHOD.en.md)
+* [Опис методу українською мовою](methodology/METHOD.uk.md)
 * [Описание метода на русском языке](methodology/METHOD.ru.md)
 * [Chunk-contract schema](schemas/CONTRACTS.schema.md)
 * [Validation-scenario schema](schemas/SCENARIOS.schema.md)
@@ -120,6 +122,135 @@ It can be used:
 * as a methodological reference accompanied by project-local additive extensions.
 
 Project-specific rules should remain outside the universal core unless they have been separately generalised and intentionally promoted into the method.
+
+<details>
+<summary><strong>Українська версія</strong></summary>
+
+## Prompt-Literate Workflow
+
+Prompt-Literate Workflow (PLW) — експериментальний метод використання великої мовної моделі в literate-інженерному процесі.
+
+Це не скорочена схема `prompt -> code`.
+
+Метод розглядає LLM як виконавця або редактора в межах структури, заданої людиною, а не як системного архітектора за замовчуванням. Промпт є операцією над джерелом та його контрактами, а не самостійним джерелом істини. Вивід LLM залишається артефактом-кандидатом, доки не пройде review, детерміновану валідацію та трасовану процедуру прийняття.
+
+```text
+human-authored literate plan
+  → chunk contracts
+  → bounded prompt
+  → LLM-generated candidate
+  → review
+  → tests / smoke-check
+  → TRACE
+  → accepted update to canonical source
+```
+
+## Навіщо потрібен цей метод
+
+Класичне literate programming пов’язує пояснення, код і згенеровані артефакти через структуроване джерело.
+
+LLM-assisted розробка додає нову проблему: генерація має ймовірнісний характер. Модель може створювати корисний код, але її вивід не можна вважати еквівалентом детермінованого етапу збирання.
+
+Prompt-Literate Workflow зберігає пояснювальну дисципліну literate programming і явно розділяє:
+
+* human-authored задум;
+* контракти та критерії прийняття;
+* обмежені операції LLM;
+* кандидатний вивід;
+* детерміновану валідацію;
+* трасоване прийняття.
+
+## Основні правила
+
+1. Джерело істини — human-authored literate plan.
+2. Контрактний шар є обов’язковим між планом і генерацією.
+3. Промпт — операція над планом і контрактами, а не джерело істини.
+4. Історія чату — матеріал трасування, а не джерело істини.
+5. Вивід LLM — артефакт-кандидат, а не автоматично прийнята реалізація.
+6. LLM може змінювати лише явно дозволені чанки.
+7. Кожен згенерований чанк повинен мати контракт до запуску генерації.
+8. Кожен заповнюваний чанк повинен мати критерії прийняття.
+9. Один запуск промпту відповідає одному запису в TRACE.
+10. Згенерований код не можна прийняти без review і детермінованих перевірок.
+11. Ручні правки повинні бути відображені в плані, контрактах або TRACE.
+12. Локальні правила проєкту повинні доповнювати ядро, а не мовчазно перевизначати його інваріанти.
+
+## Навігація репозиторієм
+
+```text
+.
+├── README.md
+├── methodology/
+│   ├── METHOD.en.md
+│   ├── METHOD.uk.md
+│   └── METHOD.ru.md
+├── schemas/
+├── scripts/validate-project.py
+├── starter/
+└── integrations/code-constitution/
+```
+
+### Почати звідси
+
+* [Опис методу англійською мовою](methodology/METHOD.en.md)
+* [Опис методу українською мовою](methodology/METHOD.uk.md)
+* [Опис методу російською мовою](methodology/METHOD.ru.md)
+* [Схема контрактів чанків](schemas/CONTRACTS.schema.md)
+* [Схема сценаріїв валідації](schemas/SCENARIOS.schema.md)
+* [Схема TRACE фази 0](schemas/TRACE.phase-0.schema.md)
+* [Схема TRACE фази 1](schemas/TRACE.phase-1.schema.md)
+
+## Ролі файлів
+
+* `*.plan.md` — канонічний human-authored план з іменованими чанками, обмеженнями та зафіксованим задумом;
+* `CONTRACTS.md` — контрактний шар між планом і генерацією;
+* `SCENARIOS.md` — сценарії прийняття та валідації;
+* `prompts/*.prompt.md` — обмежені операції LLM над планом і контрактами;
+* `generated/` — кандидатні згенеровані артефакти до їх прийняття;
+* `scripts/validate-project.py` — перевірка обов’язкової структури методу;
+* `tests/smoke-check.*` — детермінована перевірка прийнятих артефактів;
+* `output.expected.*` — очікувані маркери виводу або snapshots;
+* `TRACE.md` — журнал запусків промптів, рішень, review, прийняття та відхилення змін.
+
+## Мінімальний процес
+
+1. Написати або зафіксувати human-authored plan.
+2. Визначити іменовані чанки.
+3. Додати контракти для всіх LLM-fillable чанків.
+4. Визначити сценарії та критерії прийняття.
+5. Позначити дозволені точки генерації через `LLM-TODO`.
+6. Запустити структурну валідацію.
+7. Виконати bounded prompt.
+8. Прийняти лише дозволені заміни чанків.
+9. Виконати review кандидатного виводу.
+10. Запустити tests або smoke-check.
+11. Зафіксувати запуск, правки, перевірки та рішення в `TRACE.md`.
+12. Оновити canonical source лише після прийняття.
+
+## Граничний статус
+
+Prompt-Literate Workflow залишається експериментальним методом.
+
+Він не є еквівалентом детермінованих literate-workflows: WEB, CWEB, noweb, Org Babel, Quarto, Jupyter або R Markdown. Детермінований шар методу утворюють human-authored plan, contracts, scenarios, tests і trace. Вивід LLM залишається залежним від моделі, версії, контексту та режиму виконання.
+
+Метод було спочатку сформульовано в огляді [*Literate Programming: Donald Knuth, WEB, and Contemporary Workflows*](https://github.com/Zhovten-Games/literate-programming), а згодом уточнено під час практичного застосування до незалежного ядра проєкту.
+
+## Необов’язкові інтеграції
+
+[Комплект інтеграції з «Конституцією коду»](integrations/code-constitution/README.md) поєднує PLW з окремо прийнятими Конституцією, Установчим профілем і похідним Законодавством проєкту. Нормативний корпус зберігає силу в питаннях повноважень, правил і прийняття; human-authored PLW-план зберігає силу щодо задуму та обмеженої структури конкретної операції. Редакції обох зовнішніх джерел закріплюються, конфлікт зупиняє запуск, а вивід LLM залишається артефактом-кандидатом до детермінованих перевірок і людського прийняття уповноваженим суб’єктом.
+
+## Використання як template repository або submodule
+
+Репозиторій навмисно залишається компактним.
+
+Його можна використовувати:
+
+* як GitHub template repository для нового PLW-проєкту;
+* як pinned Git submodule у складі більшого репозиторію;
+* як методологічну основу з локальними additive-розширеннями проєкту.
+
+Специфічні правила проєкту повинні залишатися за межами універсального ядра, доки їх не буде окремо узагальнено та навмисно перенесено до основи методу.
+</details>
 
 <details>
 <summary><strong>Русская версия</strong></summary>
@@ -180,6 +311,7 @@ Prompt-Literate Workflow сохраняет объяснительную дис�
 ├── README.md
 ├── methodology/
 │   ├── METHOD.en.md
+│   ├── METHOD.uk.md
 │   └── METHOD.ru.md
 ├── schemas/
 ├── scripts/validate-project.py
@@ -190,6 +322,7 @@ Prompt-Literate Workflow сохраняет объяснительную дис�
 ### Начать отсюда
 
 * [Описание метода на английском языке](methodology/METHOD.en.md)
+* [Опис методу українською мовою](methodology/METHOD.uk.md)
 * [Описание метода на русском языке](methodology/METHOD.ru.md)
 * [Схема контрактов чанков](schemas/CONTRACTS.schema.md)
 * [Схема сценариев валидации](schemas/SCENARIOS.schema.md)
