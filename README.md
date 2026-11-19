@@ -126,7 +126,7 @@ It can be used:
 Project-specific rules should remain outside the universal core unless they have been separately generalised and intentionally promoted into the method.
 
 <details>
-<summary><strong>Русская версия</strong></summary>
+<summary>Русская версия</summary>
 
 ## Prompt-Literate Workflow
 
@@ -257,7 +257,7 @@ Prompt-Literate Workflow остаётся экспериментальным м�
 </details>
 
 <details>
-<summary><strong>Українська версія</strong></summary>
+<summary>Українська версія</summary>
 
 ## Prompt-Literate Workflow
 

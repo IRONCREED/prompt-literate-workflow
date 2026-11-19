@@ -99,7 +99,7 @@ Stop and request a decision when:
   separation required by the Profile.
 
 <details>
-<summary><strong>Русская версия</strong></summary>
+<summary>Русская версия</summary>
 
 ## Интеграция с «Конституцией кода»
 
@@ -127,7 +127,7 @@ Stop and request a decision when:
 </details>
 
 <details>
-<summary><strong>Українська версія</strong></summary>
+<summary>Українська версія</summary>
 
 ## Інтеграція з «Конституцією коду»
 
@@ -156,7 +156,7 @@ Stop and request a decision when:
 </details>
 
 <details>
-<summary><strong>Беларуская версія</strong></summary>
+<summary>Беларуская версія</summary>
 
 ## Інтэграцыя з «Канстытуцыяй кода»
 
